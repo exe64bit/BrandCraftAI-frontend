@@ -2,7 +2,9 @@ import axios from 'axios';
 import { DEMO_PROJECT } from '../data/sampleProject';
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL || (import.meta.env.PROD
+    ? 'https://brandcraftai-backend.onrender.com/api'
+    : '/api'),
   headers: {
     'Content-Type': 'application/json',
   },
