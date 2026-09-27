@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     port: 5173,
     allowedHosts: [
-      '.vercel.app',
+      'https://brand-craft-ai-frontend-euy5.vercel.app',
     ],
     proxy: {
       '/api': {
